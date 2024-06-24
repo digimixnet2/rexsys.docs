@@ -1,33 +1,36 @@
 미디어 목록 조회
 ==========================
 
-등록된 미디어를 조회합니다.
+관리자 페이지를 통해 업로드된 미디어 혹은 사용자에 의해 업로드된 미디어를 조회합니다.
 
-## URL
+## API URL
 
 /api/media/item/list
 
-## Parameter
+## Parameter (Method : POST)
 
 |파라미터|개요|타입|필수여부|비고|
 |---|---|---|---|---|
-|project|프로젝트 코드|string|필수*|-|
-|token|토큰(키)|string|필수*|클라이언트 인증에서 받은 토큰키|
-|category|미디어 index 혹은 미디어의 id|string|필수*|관리자 페이지에서 생성한 미디어의 index 혹은 id 값|
+|project|프로젝트 코드|string|${\color{red}필수}$|-|
+|token|토큰(키)|string|${\color{red}필수}$|클라이언트 인증에서 받은 토큰키|
+|category|미디어 index 혹은 미디어의 id|string|${\color{red}필수}$|관리자 페이지에서 생성한 미디어의 index 혹은 id 값|
 |page|페이지번호|int|선택|페이지번호 미 입력시 기본값 = 1 |
 |per_record_num|한 페이지에 보여지는 미디어수|int|선택|미 입력시 기본값 = 50|
 |text|검색어|string|선택|Tag 검색어 조회|
 |sort|정렬방법|string|선택|미 입력시 기본값 = 'desc'<br>(desc : 최근순, asc : 오랜된 순, like : 인기순)|
 |used|승인된 미디어 여부|stirng|선택|미 입력시 기본값 = ''<br>(모두 : '', 승인된 미디어만 : y, 미승인된 미디어만 : n|
-|term|유효기간 설정여부|int|선택||미 입력시 기본값 = ''<br>(모두 : '', 유효기간 설정된 미디어만 : y |
+|term|유효기간 설정여부|int|선택|미 입력시 기본값 = ''<br>(모두 : '', 유효기간 내 미디어만 : y |
 
-## jQuery 사용시. 예제
+### 목록조회 예제(jQuery)
 
 ```javascript
 var url = '/api/media//item/list';
 var data = {
 	project: '프로젝트 코드'
 	token: '토큰키',
+	category: 'media-1' // or database table column tb_idx
+	page : 1, // 1페이지 호출
+	per_record_num : 100 // 한페이지에 100개 보여줌.
 };
 
 var postdata= window.btoa(encodeURIComponent(JSON.stringify( data )));
@@ -53,7 +56,7 @@ $.ajax({
 });
 ```
 
-## Result Json.
+### Return Result Json. ( /api/media/item/list )
 
 ```json
 {
