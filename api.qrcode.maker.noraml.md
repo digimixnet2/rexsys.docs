@@ -73,7 +73,7 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
         <script type="text/javascript">
 
             var now = Date.now();
-			var key = GetURLParameter( 'key' );
+            var key = GetURLParameter( 'key' );
 			var data = JSON.parse(decodeURIComponent(window.atob(key)));
 			console.log( 'data:', data );
 			var timestamp = parseInt( data.timestamp );
