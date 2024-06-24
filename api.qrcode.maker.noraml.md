@@ -84,7 +84,7 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
 				console.warn( "!!!! 시간이 만료된 URL" );
 			}
 			
-			function GetURLParameter(name) {
+            function GetURLParameter(name) {
                 name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
                 var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
