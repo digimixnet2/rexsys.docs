@@ -21,15 +21,15 @@
 
 ```javascript
 var url = '/api/rexsys/cgi/certificate/productkey';
-var data = {
+var postdata = {
 	project : '프로젝트 코드'
 	productkey : '관리자 페이지에서 생성한 클라이언트의 제품키',
 };
 
-var postdata= window.btoa(encodeURIComponent(JSON.stringify( data )));
+var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
 $.ajax({
 	url: url,
-	data: postdata,
+	data: encodedata,
 	method: 'POST',
 	dataType: 'json'
 })
