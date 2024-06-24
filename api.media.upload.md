@@ -25,7 +25,7 @@
 
 
 ```javascript
-var files;
+var files = [];
 
 $('#inp-upload-files').on ( 'change', function(e){
 
@@ -43,9 +43,11 @@ function MultipleUpload(){
 	var postdata = {
 		project : '프로젝트 코드'
 		token : '토큰키',
-		category '미디어 카테고리의 index or id'
+		category '미디어 카테고리의 index or id',
+		writer : '작성자', //선택 사항
+		tag : '가, 나, 다' //선택 사항 콤마단위
 	};
-	var encodedata = window.btoa(encodeURIComponent(JSON.stringify( postdata )));
+	var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
 	var formdata = new FormData();
 	for( var i = 0; i < files.length; ++ i )
 	{
