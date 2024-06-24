@@ -30,14 +30,6 @@ var files;
 $('#inp-upload-files').on ( 'change', function(e){
 
 	files = Array.prototype.slice.call(e.target.files);
-
-	var formdata = new FormData();
-	var encodedata =  window.btoa(encodeURIComponent(JSON.stringify( postdata )));
-
-	for( var i = 0; i < files.length; ++ i )
-	{
-		formdata.append ( 'files[]', this.files[i] );
-	}
 	
 });
 
@@ -80,9 +72,11 @@ function MultipleUpload(){
 					}
 				}, false );
 			}
+			return pdata;
 		},
 		success : function( response ) 
 		{
+			consoel.log( response )
 		}
 	});
 
