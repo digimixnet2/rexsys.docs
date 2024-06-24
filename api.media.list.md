@@ -25,7 +25,7 @@
 
 ```javascript
 var url = '/api/media//item/list';
-var data = {
+var postdata = {
 	project: '프로젝트 코드'
 	token: '토큰키',
 	category: 'media-1' // or database table column tb_idx
@@ -33,7 +33,6 @@ var data = {
 	per_record_num : 100 // 한페이지에 100개 보여줌.
 };
 
-var postdata= window.btoa(encodeURIComponent(JSON.stringify( data )));
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
 
 $.ajax({
