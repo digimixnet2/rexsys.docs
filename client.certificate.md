@@ -1,5 +1,15 @@
 클라이언트 인증 및 토큰 발급
 ==========================
+
+parameter
+|파라미터|개요|타입|필수여부|비고|
+|------|---|---|---|---|
+
+
+jQuery 사용시.
+
+Example
+
 ```javascript
 var url = '/api/rexsys/cgi/certificate/productkey';
 var data = {
