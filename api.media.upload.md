@@ -3,26 +3,34 @@
 
 키오스크 혹은 웹사이트에서 미디어파일을 업로드 합니다.
 
-## URL
+### API URL
 
-/api/rexsys/cgi/certificate/productkey
+/api/ide/media/item/upload
 
-## Parameter
+## Parameter (Method : POST)
 
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
-|project|프로젝트 코드|string|필수*|-|
-|projectkey|제품키|string|필수*|관리자 페이지에서 생성한 클라이언트의 제품키|
+|project|프로젝트 코드|string|${\color{red}필수}$|-|
+|projectkey|제품키|string|${\color{red}필수}$|관리자 페이지에서 생성한 클라이언트의 제품키|
+|category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID
+|tag|미디어ID|string|선택|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)
+|writer|미디어 작성자|string|선택|미디어 업로드 계정 혹은 작성자
+
 
 ## HTML From 
+
+다수의 파일을 함께 업로드 할 때는 input 태그 안에 multiple 을 입력, 한개만 업로드할 경우는 삭제합니다.
+
+미디어 파일만 업로드할 경우, accept 에 확장자를 넣어, 다른 확장자의 파일이 업로드되는 것을 방지 합니다.
+
 ```javascript
 <form id="filesform" accept-charset="UTF-8">
       <input class="form-control" type="file" name="files[]" id="inp-upload-files" accept=".jpg, .png, .gif, .mp3, .mp4, .webm" multiple>
 </form>
 <input type="button" value="전송" id="btn-upload-files">
 ```
-## jQuery 사용시. 예제
-
+## 파일업로드 예제 (jQuery)
 
 ```javascript
 var files = [];
@@ -87,7 +95,7 @@ function MultipleUpload(){
 
 ```
 
-## Result Json.
+### Retrun Result Json. (/api/ide/media/item/upload)
 
 ```
 {
