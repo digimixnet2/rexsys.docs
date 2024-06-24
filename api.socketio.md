@@ -2,7 +2,7 @@ Rexsys Socket.IO
 ==========================
 
 Rexsys 서버 그리고, 클라이언트 간에 실시간 통신을 위해서 Python 기반의 Socket.IO javascript 를 사용합니다.
-Socket.IO 접속시 사용되는 Token, uid 는 
+Socket.IO 접속시 사용되는 Token, uid 는 [클라이언트 인증 및 토큰 발급](https://github.com/digimixnet2/rexsys.docs/blob/main/api.client.certificate.md) 참고하시기 바랍니다.
 
 ## Socket.IO 스크립트 파일 다운로드
 
