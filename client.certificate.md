@@ -1,13 +1,12 @@
 클라이언트 인증 및 토큰 발급
 ==========================
+## URL
+
+/api/rexsys/cgi/certificate/productkey
 
 ## Parameter
 
 키오스크 혹은 웹사이트는 프로젝트 코드와 제품키를 관리자 페이지를 통해 발급 받아야 하며, API를 이용시 필요한 토큰를 생성하여 한다.
-
-## URL
-
-/api/rexsys/cgi/certificate/productkey
 
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
