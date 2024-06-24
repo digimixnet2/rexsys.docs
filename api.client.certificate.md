@@ -15,6 +15,8 @@
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |projectkey|제품키|string|${\color{red}필수}$|관리자 페이지에서 생성한 클라이언트의 제품키|
 
+*** 현재 버전은 project 코드를 전송하지 않아도 인증되지만, 2024년 7월 10일 부터는 필수로 입력하여 인증 받을 수 있습니다.
+
 ### 인증 및 토큰키 발급 예제 (jQuery)
 
 ```javascript
