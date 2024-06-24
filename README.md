@@ -10,5 +10,5 @@
   ### 3.1. [미디어 업로드](https://github.com/digimixnet2/rexsys.docs/blob/main/api.media.upload.md)
   ### 3.2. [미디어 목록 조회](https://github.com/digimixnet2/rexsys.docs/blob/main/api.media.list.md)
 
-## 4. QRCode
-  ### 4.1. [QRCode 일반 생성](https://github.com/digimixnet2/rexsys.docs/blob/main/api.qrcode.maker.noraml.md)
+## 4. QRCODE
+  ### 4.1. [QRCODE 생성 - 일반형](https://github.com/digimixnet2/rexsys.docs/blob/main/api.qrcode.maker.noraml.md)
