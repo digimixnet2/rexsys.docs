@@ -8,7 +8,7 @@
 
 /api/rexsys/cgi/certificate/productkey
 
-### Parameter (Method POST)
+### Parameter (Method : POST)
 
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
