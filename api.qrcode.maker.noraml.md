@@ -46,7 +46,7 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
         <script type="text/javascript">
 
             var now = Date.now().toString();
-			var enc_date = window.btoa(encodeURIComponent(JSON.stringify( { timestamp : now } )));
+            var enc_date = window.btoa(encodeURIComponent(JSON.stringify( { timestamp : now } )));
             var tag_url = 'http://127.0.0.1/event.html?key='+enc_date;
 			var encodedata = window.btoa(encodeURIComponent(JSON.stringify( { tag : tag_url } )));
             document.getElementById('tmp').appendChild(img);
