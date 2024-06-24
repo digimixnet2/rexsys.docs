@@ -19,40 +19,76 @@
 <form id="filesform" accept-charset="UTF-8">
       <input class="form-control" type="file" name="files[]" id="inp-upload-files" style="display:none;" accept=".jpg, .png, .gif, .mp3, .mp4, .webm" multiple>
 </form>
+<input type="button" value="전송" id="btn-upload-files">
 ```
 ## jQuery 사용시. 예제
 
 
 ```javascript
-var url = '/api/media/item/upload';
-var data = {
-	project : '프로젝트 코드'
-	token : '키키',
-};
+var files;
 
-var postdata= window.btoa(encodeURIComponent(JSON.stringify( data )));
-$.ajax({
-	url: url,
-	data: postdata,
-	method: 'POST',
-	dataType: 'json'
-})
+$('#inp-upload-files').on ( 'change', function(e){
 
-.done(function (rs) {
-	if( rs.rexsys.result.token != null )
+	files = Array.prototype.slice.call(e.target.files);
+
+	var formdata = new FormData();
+	var encodedata =  window.btoa(encodeURIComponent(JSON.stringify( postdata )));
+
+	for( var i = 0; i < files.length; ++ i )
 	{
-		console.log( '** token', rs.rexsys.result.token );
-		console.log( '** client id', rs.rexsys.result.clientid );
-		console.log( '** io', rs.rexsys.result.config.io );
+		formdata.append ( 'files[]', this.files[i] );
 	}
-	else
-	{
-		console.warn('There is a communication failure with the Rexsys server.');
-	}
-})
-.fail(function (rs) {
-	console.warn('There is a communication failure with the Rexsys server.');
+	
 });
+
+$('#btn-upload-files').on( 'click', function(e){
+	MultipleUpload();
+});
+
+function MultipleUpload(){
+
+	var url = '/api/media/item/upload';
+	var postdata = {
+		project : '프로젝트 코드'
+		token : '토큰키',
+		category '미디어 카테고리의 index or id'
+	};
+	var encodedata = window.btoa(encodeURIComponent(JSON.stringify( postdata )));
+	var formdata = new FormData();
+	for( var i = 0; i < files.length; ++ i )
+	{
+		formdata.append ( 'files[]', files[i] );
+	}
+	formdata.append ( 'EncodeData', encodedata.EncodeData );
+	$.ajax({
+		url: url,
+		data: formdata,
+		type: 'post',
+		cache: false,
+		contentType: false,
+		processData: false,  
+		xhr: function () {
+			var pdata = $.ajaxSettings.xhr();
+			if( pdata.upload )
+			{
+				// 업로드 프로그레스
+				pdata.upload.addEventListener( 'progress', function (e) {
+					if (e.lengthComputable) 
+					{
+						var percent = Math.floor( e.loaded * 100 / e.total );
+						console.log( '** upload progress', percent, '%' );
+					}
+				}, false );
+			}
+		},
+		success : function( response ) 
+		{
+		}
+	});
+
+}
+
+
 ```
 
 ## Result Json.
@@ -60,30 +96,21 @@ $.ajax({
 ```
 {
     "rexsys": {
-        "result": {
-            "clientid": "클라이언트ID",
-            "clients": "유효클라이언트수",
-            "config": {
-                "io": {
-                    "client": "/io/프로젝트코드/client",
-                    "user": "/io/프로젝트코드/user"
-                }
-            },
-            "expire": {
-                "datetime": "2030-12-31 23:59:59",
-                "timestamp": 1924959599
-            },
-            "namespace": "ide",
-            "productkey": "제품키",
-            "project": "프로젝트명",
-            "token": "발급된 토큰"
-        },
+        "result": [
+            {
+                "filename": "5-21__1.jpg",
+                "group": "image",
+                "mimetype": "image/jpeg",
+                "realname": "5-21_.jpg",
+                "size": 63153
+            }
+        ],
         "server": {
             "namespace": "ide",
             "remote-addess": "127.0.0.1",
             "runtime": 0,
             "status": "success",
-            "timestamp": 1719204446,
+            "timestamp": 1719211671,
             "version": "2.0"
         }
     }
