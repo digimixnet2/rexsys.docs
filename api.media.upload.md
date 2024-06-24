@@ -17,7 +17,7 @@
 ## HTML From 
 ```javascript
 <form id="filesform" accept-charset="UTF-8">
-      <input class="form-control" type="file" name="files[]" id="inp-upload-files" style="display:none;" accept=".jpg, .png, .gif, .mp3, .mp4, .webm" multiple>
+      <input class="form-control" type="file" name="files[]" id="inp-upload-files" accept=".jpg, .png, .gif, .mp3, .mp4, .webm" multiple>
 </form>
 <input type="button" value="전송" id="btn-upload-files">
 ```
