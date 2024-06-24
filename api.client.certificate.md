@@ -1,20 +1,21 @@
 클라이언트 인증 및 토큰 발급
 ==========================
 
-키오스크 혹은 웹사이트는 프로젝트 코드와 제품키를 관리자 페이지를 통해 발급 받아야 하며, 다음 API를 이용시 필요한 토큰를 생성한다.
+키오스크 혹은 웹사이트는 프로젝트 코드와 제품키를 관리자 페이지를 통해 발급 받아야 합니다.
+제공 받은 프로젝트코드(project)와 제품키(productkey)를 전송하여, 인증을 받고, Token key를 부여 받습니다.
 
-## URL
+### API URL
 
 /api/rexsys/cgi/certificate/productkey
 
-## Parameter
+### Parameter (Method POST)
 
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
-|project|프로젝트 코드|string|필수*|-|
-|projectkey|제품키|string|필수*|관리자 페이지에서 생성한 클라이언트의 제품키|
+|project|프로젝트 코드|string|${\color{red}필수}$|-|
+|projectkey|제품키|string|${\color{red}필수}$|관리자 페이지에서 생성한 클라이언트의 제품키|
 
-## jQuery 사용시. 예제
+### 인증 및 토큰키 발급 예제 (jQuery)
 
 ```javascript
 var url = '/api/rexsys/cgi/certificate/productkey';
@@ -34,9 +35,9 @@ $.ajax({
 .done(function (rs) {
 	if( rs.rexsys.result.token != null )
 	{
-		console.log( '** token', rs.rexsys.result.token );
-		console.log( '** client id', rs.rexsys.result.clientid );
-		console.log( '** io', rs.rexsys.result.config.io );
+		console.log( '** token', rs.rexsys.result.token );		// api 접근 가능한 토큰키
+		console.log( '** client id', rs.rexsys.result.clientid );	// 제품키의 클라이언트 id
+		console.log( '** io', rs.rexsys.result.config.io );		// 생성된 socketio 채널
 	}
 	else
 	{
@@ -48,7 +49,7 @@ $.ajax({
 });
 ```
 
-## Result Json.
+### Retrun Result Json. (/api/rexsys/cgi/certificate/productkey)
 
 ```
 {
