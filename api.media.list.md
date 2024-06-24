@@ -5,7 +5,7 @@
 
 ## URL
 
-/api/media//item/list
+/api/media/item/list
 
 ## Parameter
 
