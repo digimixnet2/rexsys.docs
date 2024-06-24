@@ -34,9 +34,11 @@ var data = {
 };
 
 var postdata= window.btoa(encodeURIComponent(JSON.stringify( data )));
+var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
+
 $.ajax({
 	url: url,
-	data: postdata,
+	data: encodedata,
 	method: 'POST',
 	dataType: 'json'
 })
