@@ -46,14 +46,16 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
         <div id="tmp"></div>
         <script type="text/javascript">
 
-            var now = Date.now().toString();
-            var enc_date = window.btoa(encodeURIComponent(JSON.stringify( { timestamp : now } )));
-            var tag_url = 'http://127.0.0.1/event.html?key='+enc_date;
-			var encodedata = window.btoa(encodeURIComponent(JSON.stringify( { tag : tag_url } )));
-            document.getElementById('tmp').appendChild(img);
-            /*
-                QRCode 의 URL => http://127.0.0.1/event.html?key=JTdCJTIydGltZXN0YW1wJTIyJTNBJTIyMTcxOTIxNjgzNDgxMiUyMiU3RA==
-            */
+            	var now = Date.now().toString();
+            	var enc_date = window.btoa(encodeURIComponent(JSON.stringify( { timestamp : now } )));
+            	var tag_url = 'http://127.0.0.1/event.html?key='+enc_date;
+		var encodedata = window.btoa(encodeURIComponent(JSON.stringify( { tag : tag_url } )));
+		var img = document.createElement("img");
+		img.src = tag_url;
+            	document.getElementById('tmp').appendChild(img);
+		/*
+	                QRCode 의 URL => http://127.0.0.1/event.html?key=JTdCJTIydGltZXN0YW1wJTIyJTNBJTIyMTcxOTIxNjgzNDgxMiUyMiU3RA==
+		*/
         </script>
     </body>
 </html>
