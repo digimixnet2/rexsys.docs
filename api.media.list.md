@@ -18,8 +18,8 @@
 |per_record_num|한 페이지에 보여지는 미디어수|int|선택|미 입력시 기본값 = 50|
 |text|검색어|string|선택|Tag 검색어 조회|
 |sort|정렬방법|string|선택|미 입력시 기본값 = 'desc'<br>(desc : 최근순, asc : 오랜된 순, like : 인기순)|
-|used|승인된 미디어 여부|stirng|선택|미 입력시 기본값 = ''<br>(모두 : '', 승인된 미디어만 : y, 미승인된 미디어만 : n|
-|term|유효기간 설정여부|int|선택|미 입력시 기본값 = ''<br>(모두 : '', 유효기간 내 미디어만 : y |
+|used|승인된 미디어 여부|stirng|선택|미 입력시 기본값 = ''<br>(모두 : '', 승인된 미디어만 : y, 미승인된 미디어만 : n)|
+|term|유효기간 설정여부|int|선택|미 입력시 기본값 = ''<br>(모두 : '', 유효기간 내 미디어만 : y )|
 
 ### 목록조회 예제(jQuery)
 
@@ -85,14 +85,15 @@ $.ajax({
                         "id": "",
                         "link": "",
                         "name": "Untitled",
-                        "tag": ""
+                        "tag": []
                     },
                     "realname": "thumb_5-19__1__.jpg",
                     "thumb": "http://127.0.0.1/media/demo/10/thumb_thumb_5-19__1___1_2.jpg",
                     "timestamp": 1719209760,
                     "uri": "/media/demo/10/thumb_5-19__1___1_2.jpg",
                     "url": "http://127.0.0.1/media/demo/10/thumb_5-19__1___1_2.jpg",
-                    "used": "y"
+                    "used": "y",
+                    "writer": "아무개"
                 },
                 {
                     "category": 10,
@@ -109,14 +110,15 @@ $.ajax({
                         "id": "",
                         "link": "",
                         "name": "Untitled",
-                        "tag": ""
+                        "tag": ["산", "바다", "하늘"]
                     },
                     "realname": "thumb_5-19_.jpg",
                     "thumb": "http://127.0.0.1/media/demo/10/thumb_thumb_5-19__1.jpg",
                     "timestamp": 1719209760,
                     "uri": "/media/demo/10/thumb_5-19__1.jpg",
                     "url": "http://127.0.0.1/media/demo/10/thumb_5-19__1.jpg",
-                    "used": "y"
+                    "used": "y",
+                    "writer": "아무개"
                 }
 			]
 	}
