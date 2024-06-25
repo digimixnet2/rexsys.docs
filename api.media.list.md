@@ -24,7 +24,7 @@
 ### 목록조회 예제(jQuery)
 
 ```javascript
-var url = '/api/media//item/list';
+var url = '/api/media/ide/item/list';
 var postdata = {
 	project: '프로젝트 코드'
 	token: '토큰키',
