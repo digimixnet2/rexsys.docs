@@ -30,7 +30,7 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
 </html>
 ```
 
-## 암호화를 QRCode 생성시
+## 암호화 QRCode 생성시
 
 동적 URL 생성과 QRCODE의 유효기간을 설정하기 위해서 다음과 같이 시간과 함께 Encode 한 주소와 함께 QRCode를 생성한다.
 
@@ -59,7 +59,7 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
 </html>
 
 ```
-## QRCode의 유효성 검사
+## 복호화 QRCode의 유효성 검사
 
     QRCode URL : http://127.0.0.1/event.html?key=JTdCJTIydGltZXN0YW1wJTIyJTNBJTIyMTcxOTIxNjgzNDgxMiUyMiU3RA==
 
