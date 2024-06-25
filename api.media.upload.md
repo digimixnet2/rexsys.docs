@@ -13,9 +13,17 @@
 |------|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |projectkey|제품키|string|${\color{red}필수}$|관리자 페이지에서 생성한 클라이언트의 제품키|
-|category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID
-|tag|미디어ID|string|선택|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)
-|writer|미디어 작성자|string|선택|미디어 업로드 계정 혹은 작성자
+|category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID|
+|tag|노트 태그|string|선택|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)|
+|writer|미디어 작성자|string|선택|미디어 업로드 계정 혹은 작성자|
+|name|노트 제목|string|선택|노트 제목|
+|link|노트 링크|string|선택|http:// or https:// 포함 웹주소|
+|content|노트 내용(본문)|string|선택|HTML 태그 포함 String 전송|
+|custom|사용자데이터|string|선택|사용자 데이터로 Json String 으로 전송|
+
+
+
+
 
 
 ## HTML From 
