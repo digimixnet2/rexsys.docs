@@ -14,6 +14,7 @@
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |projectkey|제품키|string|${\color{red}필수}$|관리자 페이지에서 생성한 클라이언트의 제품키|
 |category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID|
+|id|노트 Id|string|선택|노트 Id|
 |tag|노트 태그|string|선택|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)|
 |writer|미디어 작성자|string|선택|미디어 업로드 계정 혹은 작성자|
 |name|노트 제목|string|선택|노트 제목|
@@ -61,7 +62,13 @@ function MultipleUpload(){
 		token : '토큰키',
 		category '미디어 카테고리의 index or id',
 		writer : '작성자', //선택 사항
-		tag : '가, 나, 다' //선택 사항 콤마단위
+		tag : '가, 나, 다', //선택 사항 콤마단위 or "["가", "나", "다"]
+		name : '미디어 제목',
+		id : 'm-1',
+		link : 'http://digimix.co.kr',
+		content: '<span color="#ff000">레드</span>',
+		coustom: JSON.stringify( { id : 'test", sub :'xxxxx' } ),
+		
 	};
 	var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
 	var formdata = new FormData();
