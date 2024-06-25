@@ -34,7 +34,7 @@ img 태그에 직접 URL를 입력하여 QRCode를 출력할 수 있습니다.
 
 동적 URL 생성과 QRCODE의 유효기간을 설정하기 위해서 다음과 같이 시간과 함께 Encode 한 주소와 함께 QRCode를 생성한다.
 
-해당 코드는 단순히 base64를 이용한 것이므로, 보안에 취약하다. 이를 해결하기 위해서, 비공고애 암호화 복호화를 이용한 스크립트를 권장한다.
+해당 코드는 단순히 base64를 이용한 것이므로, 보안에 취약하다. 이를 해결하기 위해서, SHA 256과 같은 암호화 복호화를 이용한 스크립트를 권장한다.
 
 ```javascript
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
