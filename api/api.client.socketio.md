@@ -83,7 +83,7 @@ let postdata = {
     command: '명령',
     data: JSON.stringify({...}) // JSON.stringify 는 서버의 dictionary 와 호환이 안될 수 있으므로 에러시 처리....
 }
-let encodedata = pn.crypto.encode( postdata );
+let encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
 
 let url = '/api/ide/io/send';
 const customHeaders = {
