@@ -68,7 +68,7 @@ var senddata = {
 
 websock.emit( 'request', sendata );
 ```
-## Socket.IO를 통해 다른 클라이언트에 데이터 전송 (Single : axio )
+## Socket.IO를 통해 다른 클라이언트에 데이터 전송 (Single : Vue3 axios )
 
 Vue3에서 동일한 emit가 있어서 전송이 안되거나, 할때는 API를 이용한다.
 
