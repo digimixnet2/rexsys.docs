@@ -56,7 +56,7 @@ websock.on( 'touid', function ( rs )
 
 ```
 
-## Socket.IO를 통해 다른 클라이언트에 데이터 전송 (Single)
+## Socket.IO를 통해 다른 클라이언트에 데이터 전송 (Single : Vanilla JS, jQuery )
 ```javascript
 var senddata = {
     channel: 'client',
@@ -68,6 +68,41 @@ var senddata = {
 
 websock.emit( 'request', sendata );
 ```
+## Socket.IO를 통해 다른 클라이언트에 데이터 전송 (Single : axio )
+
+Vue3에서 동일한 emit가 있어서 전송이 안되거나, 할때는 API를 이용한다.
+
+```javascript
+
+let postdata = {
+	token : '발급받은 서버 토큰',
+	project : '프로젝트 ID',
+	channel: 'client',
+    sender: '보내는 클라이언트의 ID',
+    receiver: '받는 클라이언트의 ID',
+    command: '명령',
+    data: JSON.stringify({...}) // JSON.stringify 는 서버의 dictionary 와 호환이 안될 수 있으므로 에러시 처리....
+}
+let encodedata = pn.crypto.encode( postdata );
+
+let url = '/api/ide/io/send';
+const customHeaders = {
+	'content-type': 'text/plain'
+};
+axios.post( url, encodedata, customHeaders )
+.then((response) => {
+
+	let rs = response.data.rexsys.result;
+	
+	console.log( rs );
+
+}) .catch(function (error) {
+	// 오류발생시 실행
+	console.log( error )
+})
+
+```
+
 
 ## Socket.IO를 통해 모든 클라이언트 데이터 전송 (Broadcast)
 ```javascript
