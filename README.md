@@ -1,4 +1,12 @@
-# REXSYS API 개발 가이드 및 명세.
+
+## 설치 및 환경설정
+
+### 디렉토리 구조
+
+### 시스템 환경 설정
+### 프로젝트 생성 및 환경 설정
+
+## REXSYS API 개발 가이드 및 명세.
 
 ### 1. 클라이언트
 1.1. [클라이언트 인증 및 토큰 발급](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.client.certificate.md)
