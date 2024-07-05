@@ -9,6 +9,7 @@
 ## REXSYS API 개발 가이드 및 명세.
 
 ### 1. 클라이언트
+
 1.1. [클라이언트 인증 및 토큰 발급](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.client.certificate.md)
 
 1.2. [클라이언트를 위한 Socket.IO](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.client.socketio.md)
@@ -20,6 +21,8 @@
 
 3.2. [미디어 목록 조회](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.media.list.md)
 
+3.3. [좋아요 - 인기투표](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.media.like.md)
+
 ### 4. QRCODE
 
 4.1. [QRCODE 생성 - 일반형](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.qrcode.maker.noraml.md)
@@ -29,8 +32,10 @@
 
 5.1. 결제 내역 목록 (비공개)
 
-5.2. 결제 내역 전송
-  
+5.2  [아키텍처 기부처 목록 가져오기](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.architecture.donantion.md)
+
+5.3. [결제 내역 전송 (기부처 포함)](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.send.md)
+
 ### 6. SNS
 
 5.1. SNS 전송 목록 (비공개)
@@ -44,6 +49,8 @@
 ### *** Release Note & Issue.
 
 #### version 2.0
+
+2024.07.04 아키텍처 기부처 불러오기
 
 2024.06.25 전송 파라미터의 Encode 스크립트 오류 수정.
 
