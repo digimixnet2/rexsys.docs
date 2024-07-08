@@ -7,7 +7,7 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 
 /api/ide/payment/process
 
-## Parameter (Method : POST)
+## 필수 Parameter (Method : POST)
 
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
@@ -22,6 +22,12 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 |user_nickname|사용자 별칭(별명)|string|${\color{red}필수}$|-|
 |user_nickname|포인트|string|${\color{red}필수}$|사용자가 결제한 금액 혹은 지급 포인트|
 |course_id|기부처|string|${\color{red}필수}$|결제한 금액을 기부할 곳|
+|receiver|알림 받는 클라이언트|string|${\color{red}필수}$|알림 받는 클라이언트 ( 모두 : echo )|
+
+## 결제 Parameter (Method : POST)
+
+|파라미터|개요|타입|필수여부|비고|
+|------|---|---|---|---|
 |tranCode|결제여부|string|Return|결제 성공여부|
 |outRtn|-|string|Return|-|
 |outReplyCode|-|string|Return|-|
@@ -43,7 +49,7 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 |outTranNo|-|string|Return|-|
 |outMerchantRegNo|-|string|Return|-|
 
-### 결제 결과 전송 예제 (JQuery)
+### 결제 내역 전송 예제 (JQuery)
 
 ```javascript
 var url = '/api/ide/payment/process';
@@ -68,6 +74,7 @@ var postdata = {
 	pay_point	: 1000,				// 결제 금액
 	
 	course_id	: '기부처 Id'			// 아키텍처에서 생성은 기부처의 group_id
+	receiver	: 'echo'			// 포인트 적립 후 모든 클라이언트에 전달
 	
 	// 이하 결제 단말기로 부터 리턴 받은 값
 	// 이하 값들은 예시이므로, 꼭 리턴 받은 받은 값으로 전송해야 함.
@@ -93,6 +100,61 @@ var postdata = {
 	outIssuerName: '디지카드',
 	outTranNo : '',
 	outMerchantRegNo : '00913235744'
+}
+
+var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
+
+$.ajax({
+	url: url,
+	data: encodedata,
+	method: 'POST',
+	dataType: 'json'
+})
+
+.done(function (rs) {
+	if( rs.rexsys.result.token != null )
+	{
+		console.log( '** data', rs.data );	
+	}
+	else
+	{
+		console.warn('There is a communication failure with the Rexsys server.');
+	}
+})
+.fail(function (rs) {
+	console.warn('There is a communication failure with the Rexsys server.');
+});
+```
+
+
+### 포인트만 전송 예제 (JQuery)
+
+tranCode 이하 파라미터를 전송하지 않으면, 결제 내역을 저장되지 않은 가운데 포인트만 저장됩니다.
+
+```javascript
+var url = '/api/ide/payment/process';
+var postdata = {
+	project: '프로젝트 코드'
+	token: '토큰키',
+	idx: 1 // 미디어 리스트의 idx 항목
+	point : 1 // 미디어에 가산되는 포인트 점수
+};
+
+var postdata = {
+	section		: 'donation',
+	project		: '프로젝트 코드',
+	token		: '토큰키',
+	sensor_uid	: '',				// 기부 키오스크시, 값 없음.
+	content_id	: 'kiosk',			// 기부 키오스크시, kiosk
+	content_section	 : 'payment',	// 기부 키오스크시, payment
+	clientid	: '키오스크 클라이언트 Id',
+	user_key	: '',				// 기부 키오스크시, ''
+	user_name	: '',				// 기부 키오스크시, ''
+	user_nickname :'',				// 기부 키오스크시, ''
+	pay_point	: 1000,				// 결제 금액
+	
+	course_id	: '기부처 Id'			// 아키텍처에서 생성은 기부처의 group_id
+
 }
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };

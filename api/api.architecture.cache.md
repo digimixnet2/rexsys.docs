@@ -61,5 +61,7 @@ $.ajax({
 
 JSON 파일은 관리자 아키텍처 메뉴에서 EXPORT 된 파일입니다.
 
+```
 /data/{프로젝트명}/architecture/architecture.{아키텍처ID}.min.js
+```
 
