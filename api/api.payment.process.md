@@ -13,7 +13,6 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 |------|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |token|토큰(키)|string|${\color{red}필수}$|클라이언트 인증에서 받은 토큰키|
-
 |section|포인트 지급 구분|string|${\color{red}필수}$|포인트 지급에 대한 구분 (기부 : donation, 체크인 : checkin 등...|
 |sensor_uid|센서 Id|string|${\color{red}필수}$|NFC 혹은 비콘등 센서를 이용할 경우, 기본값 = '' |
 |content_id|콘텐츠 Id|string|${\color{red}필수}$|동일한 기능의 클라이언트가 다수 있을 경우에 통용되는 지칭 Id( 체크인 : checkin )|
@@ -22,9 +21,7 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 |user_name|사용자 이름|string|${\color{red}필수}$|-|
 |user_nickname|사용자 별칭(별명)|string|${\color{red}필수}$|-|
 |user_nickname|포인트|string|${\color{red}필수}$|사용자가 결제한 금액 혹은 지급 포인트|
-
 |course_id|기부처|string|${\color{red}필수}$|결제한 금액을 기부할 곳|
-
 |tranCode|결제여부|string|Return|결제 성공여부|
 |outRtn|-|string|Return|-|
 |outReplyCode|-|string|Return|-|
