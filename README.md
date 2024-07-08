@@ -32,9 +32,9 @@
 
 5.1. 결제 내역 목록 (비공개)
 
-5.2  [아키텍처 기부처 목록 가져오기](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.architecture.donantion.md)
+5.2  [아키텍처 기부처 목록 가져오기](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.architecture.cache.md)
 
-5.3. [결제 내역 전송 (기부처 포함)](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.send.md)
+5.3. [결제 내역 전송](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.process.md)
 
 ### 6. SNS
 
