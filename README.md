@@ -30,11 +30,11 @@
 
 ### 5. 결제시스템
 
-5.1. 결제 내역 목록 (비공개)
+5.1  [아키텍처 캐시 데이터 : 기부처 목록 가져오기](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.architecture.cache.md)
 
-5.2  [아키텍처 기부처 목록 가져오기](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.architecture.cache.md)
+5.2. [결제 내역 전송](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.process.md)
 
-5.3. [결제 내역 전송](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.process.md)
+5.3. [기부 통계](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.statistics.md)
 
 ### 6. SNS
 
