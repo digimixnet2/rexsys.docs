@@ -30,7 +30,7 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 |outCatId|-|string|Return|-|
 |outWCC|-|string|Return|-|
 |outCardNo|-|string|Return|-|
-|outTranAmt|-|string|Return|-|
+|outTranAmt|결제된 금액|int|Return|-|
 |outVatAmt|-|string|Return|-|
 |outSvcAmt|-|string|Return|-|
 |outJanAmt|-|string|Return|-|
@@ -42,6 +42,8 @@ rexsys.desktop 에서 결제 요청 후, return 받은 변수를 모두 전송�
 |outIssuerName|-|string|Return|-|
 |outTranNo|-|string|Return|-|
 |outMerchantRegNo|-|string|Return|-|
+
+### 결제 결과 전송 예제 (JQuery)
 
 ```javascript
 var url = '/api/ide/payment/process';
