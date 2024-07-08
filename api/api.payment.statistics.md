@@ -77,7 +77,7 @@ $.ajax({
                 "count": 128,
                 "point": 128000
             },
-            "course": {
+            "course": [
 				{
                     "id": "orphanage-1",
                     "point": 165000
@@ -90,7 +90,7 @@ $.ajax({
                     "id": "orphanage-3",
                     "point": 30000
                 }
-			},
+			],
 			"starter-point": 0,
             "today": {
                 "count": 0,

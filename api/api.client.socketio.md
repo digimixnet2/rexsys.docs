@@ -103,7 +103,6 @@ axios.post( url, encodedata, customHeaders )
 
 ```
 
-
 ## Socket.IO를 통해 모든 클라이언트 데이터 전송 (Broadcast)
 ```javascript
 준비 중...

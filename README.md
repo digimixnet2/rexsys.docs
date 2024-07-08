@@ -36,6 +36,7 @@
 
 5.3. [기부 통계](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.payment.statistics.md)
 
+
 ### 6. SNS
 
 5.1. SNS 전송 목록 (비공개)
