@@ -12,7 +12,7 @@
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
-|projectkey|제품키|string|${\color{red}필수}$|관리자 페이지에서 생성한 클라이언트의 제품키|
+|token|토큰(키)|string|${\color{red}필수}$|클라이언트 인증에서 받은 토큰키|
 |category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID|
 |id|노트 Id|string|선택|노트 Id|
 |tag|노트 태그|string|선택|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)|
