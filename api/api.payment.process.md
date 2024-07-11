@@ -133,12 +133,6 @@ tranCode 이하 파라미터를 전송하지 않으면, 결제 내역을 저장�
 
 ```javascript
 var url = '/api/ide/payment/process';
-var postdata = {
-	project: '프로젝트 코드'
-	token: '토큰키',
-	idx: 1 // 미디어 리스트의 idx 항목
-	point : 1 // 미디어에 가산되는 포인트 점수
-};
 
 var postdata = {
 	section		: 'donation',
@@ -152,9 +146,8 @@ var postdata = {
 	user_name	: '',				// 기부 키오스크시, ''
 	user_nickname :'',				// 기부 키오스크시, ''
 	pay_point	: 1000,				// 결제 금액
-	
 	course_id	: '기부처 Id'			// 아키텍처에서 생성은 기부처의 group_id
-
+	receiver	: 'echo'			// 포인트 적립 후 모든 클라이언트에 전달
 }
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
