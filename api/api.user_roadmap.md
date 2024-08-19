@@ -5,7 +5,7 @@
 
 ### API URL
 
-/api/ide/user/roadmap/log
+/api/ide/user/event/roadmap/log
 
 ### Parameter (Method : POST)
 
@@ -17,7 +17,7 @@
 ### 사용자키 로드맵 로그 예제 (jQuery)
 
 ```javascript
-var url = '/api/ide/user/roadmap/log';
+var url = '/api/ide/user/event/roadmap/log';
 var postdata = {
 	project : '프로젝트 코드'
 	userkey : '이벤트 체크인 성공시 부여 받은 사용자키',
