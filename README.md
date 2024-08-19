@@ -20,7 +20,7 @@
 
 2.2. [사용자키 인증](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.certificate.md)
 
-2.3. [사용자 로드맵](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.loadmap.md)
+2.3. [사용자 로드맵](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user_roadmap.md)
 
 
 ### 3. 미디어
