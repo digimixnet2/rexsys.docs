@@ -53,7 +53,7 @@
   
 ### 6. 단축 URL
 
-
+### 7. QR 가이드
 
 ### *** Release Note & Issue.
 
