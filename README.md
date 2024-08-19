@@ -14,6 +14,14 @@
 
 1.2. [클라이언트를 위한 Socket.IO](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.client.socketio.md)
 
+### 2. 사용자
+
+2.1. [사용자 체크인](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.checkin.md)
+
+2.2. [사용자키 인증](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.certificate.md)
+
+2.3. [사용자 로드맵](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.loadmap.md)
+
 
 ### 3. 미디어
 
