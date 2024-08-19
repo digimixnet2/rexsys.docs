@@ -16,11 +16,11 @@
 
 ### 2. 사용자
 
-2.1. [사용자 체크인](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.checkin.md)
+2.1. [사용자 체크인](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user_event_checkin.md)
 
-2.2. [사용자키 인증](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user.certificate.md)
+2.2. [사용자키 인증](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user_event_certificate.md)
 
-2.3. [사용자 로드맵](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user_roadmap.md)
+2.3. [사용자 로드맵](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.user_event_roadmap.md)
 
 
 ### 3. 미디어
