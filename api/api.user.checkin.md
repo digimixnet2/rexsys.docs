@@ -47,10 +47,10 @@ $.ajax({
 	}
 	var decodedata = JSON.parse(decodeURIComponent(window.atob(rs.rexsys.result))
 	console.log( '*** userkey', decodedata.userkey );
-  console.log( '*** userkidx', decodedata.useridx );
-  console.log( '*** nickname', decodedata.nickname );
-  console.log( '*** user_phone', decodedata.user_phone );
-  console.log( '*** email', decodedata.email );
+  	console.log( '*** userkidx', decodedata.useridx );
+  	console.log( '*** nickname', decodedata.nickname );
+  	console.log( '*** user_phone', decodedata.user_phone );
+  	console.log( '*** email', decodedata.email );
 })
 .fail(function (rs) {
 	console.warn('There is a communication failure with the Rexsys server.');
