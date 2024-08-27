@@ -13,6 +13,7 @@
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |userkey|사용키|string|${\color{red}필수}$|이벤트 체크인한 후 부여받은 사용자키|
 |mission_id|미션아이디|string|${\color{red}필수}$|아키텍처의 오브젝트 아이디|
+|point|미션아이디|int|${\color{blue}선택}$|미션 수행에 따른 지급 포인트|
 
 ### 이벤트 사용자 미션 수행 결과 예제 (jQuery)
 ```javascript
@@ -20,7 +21,8 @@ var url = '/api/ide/events/user/mission/record';
 var postdata = {
 	project : '프로젝트 코드'
 	userkey : '이벤트 체크인한 후 부여받은 사용자키',
-	mission_id : '아키텍처 아이디'
+	mission_id : '아키텍처 아이디',
+	point : '포인트'
 };
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
@@ -55,6 +57,7 @@ $.ajax({
             "data_id": "dgmx-kiosk-2",
             "data_idx": 18,
             "data_type": "client",
+            "point": 1000,         
             "regi_datetime": "2024-08-27 19:37:14",
             "remote_ip": "192.168.0.15",
             "timestamp": 1724755034,
