@@ -1,6 +1,6 @@
-이벤트 사용자 인증
+이벤트 사용자 체크인
 ==========================
-이벤트 사용자 체크인으로 부터 부여 받은 사용자키(USERKEY) 유효한지 검사한다.
+이벤트 사용자 체크인으로 일정한 정보를 받고, 사용자키를 부여 받는다.
 
 ### API URL
 
@@ -11,14 +11,21 @@
 |파라미터|개요|타입|필수여부|비고|
 |------|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
-|userkey|사용키|string|${\color{red}필수}$|이벤트 체크인한 후 부여받은 사용자키|
+|user_nickname|사용자 이름(실명)|string|${\color{red}필수}$|사용자가 사용할 별칭 혹은 별명|
+|user_name|사용자 이름(실명)|string|${\color{red}필수}$|없으면 빈공간으로 전송|
+|user_email|사용자 이메일주소|string|${\color{red}필수}$|없으면 빈공간으로 전송|
+|user_phone|사용자 휴대폰번호|string|${\color{red}필수}$|하이퍼(-) 없이 전송|
+
 
 ### 이벤트 사용자 인 예제 (jQuery)
 ```javascript
-var url = '/api/ide/events/user/certificate';
+var url = '/api/ide/events/user/checkin';
 var postdata = {
 	project : '프로젝트 코드'
-	userkey : '이벤트 체크인한 후 부여받은 사용자키',
+	user_nickname : '사용자 별명',
+	user_name : '사용자 이름',
+	user_email : '사용자 이메일 주소',
+	user_phone : '사용자 휴대폰 번호'
 };
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
@@ -30,9 +37,10 @@ $.ajax({
 })
 
 .done(function (rs) {
-	if( rs.rexsys.result. != null )
+	if( rs.rexsys.result.EncodeData != null )
 	{
-		console.log( '** result', rs.rexsys.result );		// 미션 수행 내역(Array)
+		var decodedata = JSON.parse(decodeURIComponent(window.atob(rs.rexsys.result.EncodeData)))
+		console.log( '** result', decodedata );	
 	}
 	else
 	{
@@ -49,22 +57,32 @@ $.ajax({
 ```javascript
 {
     "rexsys": {
-        "result": "checkin-user",
+        "result": {
+            "EncodeData": "eyJ1c2VyX25hbWUiOiAiXHVjYzI4XHV...DBnRVdpVzdCaTRZemF4T2FoZWRzUjcweFlnZ1Jsd1kwZXZuZ3ZDTGZIUlBaRzFXQVQ1S25ROUlNYTZJRTdvaEF1RmQzcWdHYzF1YUxjR1hidXkraEJUMWFYWGZGaGhVMHA2UlhURS9tcXUrcld6UWU3TFJ1V0NtdVBxKzhzVnJpWWNzcXJyUUFheVJoSEY0UmFGWWRScWVPRVV0eTQ0PSIs...0NDUwLCAicmVtb3RlaXAiOiAiMTkyLjE2OC4wLjE1IiwgInBvaW50IjogMCwgInVzZXJfbmlja25hbWUiOiA...n0="
+        },
         "server": {
             "namespace": "ide",
             "remote-addess": "192.168.0.15",
             "runtime": 0,
             "status": "success",
-            "timestamp": 1724753878,
+            "timestamp": 1724754450,
             "version": "2.0"
         }
     }
 }
 ```
-|코드|상태|
-|------|-----|
-|checkin-user|체크인 중인 사용자(체크인 데이터 있음)|
-|checkout-user|체크아웃 상태인 사용자(체크인 데이터 없음)|
-|expired-user|사용자 키가 만료된 상태|
-
+### EncodeData Decode 내용
+```javascript
+{
+  "user_name": "차우람",
+  "userkey": "dZFGcHaBHxEKT0gEWiW7Bi4YzaxOa...HRPZG1WAT5KnQ9IMa6IE7...6RXTE/mqu+rWzQe7LRuWCmuPq+8sVriYcsqrrQAayRhHF4...4=",
+  "user_phone": "01012345678",
+  "user_email": "",
+  "user_idx": 13,
+  "timestamp": 1724754450,
+  "remoteip": "192.168.0.15",
+  "point": 0,
+  "user_nickname": "차마담"
+}
+```
 
