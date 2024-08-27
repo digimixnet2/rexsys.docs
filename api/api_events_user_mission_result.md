@@ -49,34 +49,47 @@ $.ajax({
 ```javascript
 {
     "rexsys": {
-        "result": [
-            {
-                "datetime": "2024-08-27 18:56:39",
-                "idx": 1,
-                "mission_id": "CODE-1",
-                "mission_idx": 16,
-                "mission_name": "",
-                "remote": "192.168.0.15",
-                "timestamp": 1724752599
-            }
-            ...
-            {
-                "datetime": "2024-08-27 18:50:39",
-                "idx": 1,
-                "mission_id": "CODE-2",
-                "mission_idx": 11,
-                "mission_name": "",
-                "remote": "192.168.0.15",
-                "timestamp": 1724753001
-            }
-
-        ],
+        "result": {
+            "data": [
+                {
+                    "datetime": "2024-08-27 20:05:30",
+                    "idx": 1,
+                    "mission_id": "client-0",
+                    "mission_idx": 46,
+                    "mission_name": "",
+                    "mission_point": 1000,
+                    "remote": "192.168.0.15",
+                    "timestamp": 1724756730
+                },
+                {
+                    "datetime": "2024-08-27 20:13:31",
+                    "idx": 2,
+                    "mission_id": "A-01",
+                    "mission_idx": 45,
+                    "mission_name": "",
+                    "mission_point": 1000,
+                    "remote": "192.168.0.15",
+                    "timestamp": 1724757211
+                },
+                {
+                    "datetime": "2024-08-27 20:13:38",
+                    "idx": 3,
+                    "mission_id": "autoland-gj-1",
+                    "mission_idx": 11,
+                    "mission_name": "",
+                    "mission_point": 1000,
+                    "remote": "192.168.0.15",
+                    "timestamp": 1724757218
+                }
+            ],
+            "mileage": 3000
+        },
         "server": {
             "namespace": "ide",
             "remote-addess": "192.168.0.15",
             "runtime": 0,
             "status": "success",
-            "timestamp": 1724753101,
+            "timestamp": 1724757226,
             "version": "2.0"
         }
     }
