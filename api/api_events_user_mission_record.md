@@ -13,7 +13,7 @@
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |userkey|사용키|string|${\color{red}필수}$|이벤트 체크인한 후 부여받은 사용자키|
 |mission_id|미션아이디|string|${\color{red}필수}$|아키텍처의 오브젝트 아이디|
-|point|미션아이디|int|${\color{blue}선택}$|미션 수행에 따른 지급 포인트|
+|point|포인트|int|${\color{blue}선택}$|미션 수행에 따른 보상 포인트|
 
 ### 이벤트 사용자 미션 수행 결과 예제 (jQuery)
 ```javascript
