@@ -4,7 +4,7 @@
 
 ### API URL
 
-/api/ide/events/user/mission/result
+/api/ide/events/user/mission/record
 
 ### Parameter (Method : POST)
 
@@ -12,13 +12,15 @@
 |------|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |userkey|사용키|string|${\color{red}필수}$|이벤트 체크인한 후 부여받은 사용자키|
+|mission_id|미션아이디|string|${\color{red}필수}$|아키텍처의 오브젝트 아이디|
 
 ### 이벤트 사용자 미션 수행 결과 예제 (jQuery)
 ```javascript
-var url = '/api/ide/events/user/mission/result';
+var url = '/api/ide/events/user/mission/record';
 var postdata = {
 	project : '프로젝트 코드'
 	userkey : '이벤트 체크인한 후 부여받은 사용자키',
+	mission_id : '아키텍처 아이디'
 };
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
@@ -32,7 +34,7 @@ $.ajax({
 .done(function (rs) {
 	if( rs.rexsys.result. != null )
 	{
-		console.log( '** result', rs.rexsys.result );		// 미션 수행 내역(Array)
+		console.log( '** result', rs.rexsys.result );
 	}
 	else
 	{
@@ -49,34 +51,21 @@ $.ajax({
 ```javascript
 {
     "rexsys": {
-        "result": [
-            {
-                "datetime": "2024-08-27 18:56:39",
-                "idx": 1,
-                "mission_id": "CODE-1",
-                "mission_idx": 16,
-                "mission_name": "",
-                "remote": "192.168.0.15",
-                "timestamp": 1724752599
-            }
-            ...
-            {
-                "datetime": "2024-08-27 18:50:39",
-                "idx": 1,
-                "mission_id": "CODE-2",
-                "mission_idx": 11,
-                "mission_name": "",
-                "remote": "192.168.0.15",
-                "timestamp": 1724753001
-            }
-
-        ],
+        "result": {
+            "data_id": "dgmx-kiosk-2",
+            "data_idx": 18,
+            "data_type": "client",
+            "regi_datetime": "2024-08-27 19:37:14",
+            "remote_ip": "192.168.0.15",
+            "timestamp": 1724755034,
+            "user_key": "XMN2kfcwZSCCLka...5xkptfWcUtNn1dXhhBDpRN...cX3DAZBZRldtG6ICkymcV2jPSar...t9vs6u7H7bw="
+        },
         "server": {
             "namespace": "ide",
             "remote-addess": "192.168.0.15",
             "runtime": 0,
             "status": "success",
-            "timestamp": 1724753101,
+            "timestamp": 1724755034,
             "version": "2.0"
         }
     }
