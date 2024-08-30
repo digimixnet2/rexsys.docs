@@ -15,7 +15,7 @@
 |user_name|사용자 이름(실명)|string|${\color{red}필수}$|없으면 빈공간으로 전송|
 |user_email|사용자 이메일주소|string|${\color{red}필수}$|없으면 빈공간으로 전송|
 |user_phone|사용자 휴대폰번호|string|${\color{red}필수}$|하이퍼(-) 없이 전송|
-
+|agree|개인정보 동의여부|string|${\color{red}필수}$|y or n|
 
 ### 이벤트 사용자 인 예제 (jQuery)
 ```javascript
@@ -25,7 +25,8 @@ var postdata = {
 	user_nickname : '사용자 별명',
 	user_name : '사용자 이름',
 	user_email : '사용자 이메일 주소',
-	user_phone : '사용자 휴대폰 번호'
+	user_phone : '사용자 휴대폰 번호',
+	agree : 'y'
 };
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
