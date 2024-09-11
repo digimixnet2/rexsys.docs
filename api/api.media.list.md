@@ -5,7 +5,7 @@
 
 ## API URL
 
-/api/media/item/list
+/api/ide/media/item/list
 
 ## Parameter (Method : POST)
 
@@ -24,7 +24,7 @@
 ### 목록조회 예제(jQuery)
 
 ```javascript
-var url = '/api/media/ide/item/list';
+var url = '/api/ide/media/item/list';
 var postdata = {
 	project: '프로젝트 코드'
 	token: '토큰키',
