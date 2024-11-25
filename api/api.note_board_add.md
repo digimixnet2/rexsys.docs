@@ -14,11 +14,11 @@
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |token|토큰(키)|string|${\color{red}필수}$|클라이언트 인증에서 받은 토큰키|
 |category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID|
-|type|노트 타입|string||${\color{red}필수}$|기본 "board"|
-|name|글 제목|string||${\color{red}필수}$|게시물의 제목|
-|writer|글 작성자|string||${\color{red}필수}$|게시물 계정 혹은 작성자|
-|tag|글 태그|string||${\color{red}필수}$|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)|
-|link|글 링크|string||${\color{red}필수}$|http:// or https:// 포함 웹주소|
+|type|노트 타입|string|${\color{red}필수}$|기본 "board"|
+|name|글 제목|string|${\color{red}필수}$|게시물의 제목|
+|writer|글 작성자|string|${\color{red}필수}$|게시물 계정 혹은 작성자|
+|tag|글 태그|string|${\color{red}필수}$|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)|
+|link|글 링크|string|${\color{red}필수}$|http:// or https:// 포함 웹주소|
 |content|글 내용(본문)|string||${\color{red}필수}$|HTML 태그 포함 String 전송|
 
 ## HTML From 
