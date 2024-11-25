@@ -55,6 +55,11 @@
 
 ### 7. QR 가이드
 
+### 8. 게시판
+
+8.1. [글목록] (https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.note_board_list.md)
+8.2. [글쓰기(이미지 첨부 가능)] (https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.note_board_add.md)
+
 ### *** Release Note & Issue.
 
 #### version 2.0
