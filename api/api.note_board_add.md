@@ -19,7 +19,7 @@
 |writer|글 작성자|string|${\color{red}필수}$|게시물 계정 혹은 작성자|
 |tag|글 태그|string|${\color{red}필수}$|검색 키워드로 사용할 Tag<br>(콤마 , 단위로 구분하여 작성)|
 |link|글 링크|string|${\color{red}필수}$|http:// or https:// 포함 웹주소|
-|content|글 내용(본문)|string||${\color{red}필수}$|HTML 태그 포함 String 전송|
+|content|글 내용(본문)|string|${\color{red}필수}$|HTML 태그 포함 String 전송|
 
 ## HTML From 
 
