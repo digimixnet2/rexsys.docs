@@ -24,7 +24,7 @@
 ### 목록조회 예제(jQuery)
 
 ```javascript
-var url = '/api/ide/note/board/item/list';
+var url = '/api/ide/media/item/list';
 var postdata = {
 	project: '프로젝트 코드'
 	token: '토큰키',
@@ -61,60 +61,75 @@ $.ajax({
 
 ```json
 {
-    "rexsys": {
+     "rexsys": {
         "result": {
             "current_block": 1,
-            "data": [
-		...
-                {
-                    "attach": [
-                        {
-                            "filename": "20240511__2.png",
-                            "group": "image",
-                            "mimetype": "image/png",
-                            "realname": "첨부파일2.png",
-                            "size": 68176,
-                            "thumb": "http://192.168.0.15/media/haccp/board/61/thumb_20240511__2.png",
-                            "uri": "/media/haccp/board/61/20240511__2.png",
-                            "url": "http://192.168.0.15/media/haccp/board/61/20240511__2.png"
-                        },
-                        {
-                            "filename": "20240511__1.png",
-                            "group": "image",
-                            "mimetype": "image/png",
-                            "realname": "첨부파일1.png",
-                            "size": 68311,
-                            "thumb": "http://192.168.0.15/media/haccp/board/61/thumb_20240511__1.png",
-                            "uri": "/media/haccp/board/61/20240511__1.png",
-                            "url": "http://192.168.0.15/media/haccp/board/61/20240511__1.png"
-                        }
-                    ],
-                    "category": 61,
-                    "content": "<p>내용~~~~</p>",
-                    "count": 0,
-                    "datetime": "2024-11-20 14:03:47",
-                    "idx": 3,
-                    "link": "http://digimix.co.kr",
-                    "name": "하이요~",
-                    "tag": "키오스크,웹,인터렉션",
-                    "timestamp": 1732079027,
-                    "writer": "차마담"
-                }
-            ],
-            "page": 1,
+			"page": 1,
             "total_block": 1,
             "total_page": 1,
-            "total_record": 9
-        },
-        "server": {
-            "build": "20240112518",
+            "total_record": 45,
+            "url": "http://127.0.0.1"	
+            "data": [
+                {
+                    "category": 10,
+                    "datetime": "2024-06-24 15:16:00",
+                    "filename": "thumb_5-19__1___1_2.jpg",
+                    "filesize": 7034,
+                    "group": "image",
+                    "idx": 45,
+                    "like": 0,
+                    "mimetype": "image/jpeg",
+                    "note": {
+                        "content": "",
+                        "custom": null,
+                        "id": "",
+                        "link": "",
+                        "name": "Untitled",
+                        "tag": []
+                    },
+                    "realname": "thumb_5-19__1__.jpg",
+                    "thumb": "http://127.0.0.1/media/demo/10/thumb_thumb_5-19__1___1_2.jpg",
+                    "timestamp": 1719209760,
+                    "uri": "/media/demo/10/thumb_5-19__1___1_2.jpg",
+                    "url": "http://127.0.0.1/media/demo/10/thumb_5-19__1___1_2.jpg",
+                    "used": "y",
+                    "writer": "아무개"
+                },
+                {
+                    "category": 10,
+                    "datetime": "2024-06-24 15:16:00",
+                    "filename": "thumb_5-19__1.jpg",
+                    "filesize": 4995,
+                    "group": "image",
+                    "idx": 44,
+                    "like": 0,
+                    "mimetype": "image/jpeg",
+                    "note": {
+                        "content": "",
+                        "custom": null,
+                        "id": "",
+                        "link": "",
+                        "name": "Untitled",
+                        "tag": ["산", "바다", "하늘"]
+                    },
+                    "realname": "thumb_5-19_.jpg",
+                    "thumb": "http://127.0.0.1/media/demo/10/thumb_thumb_5-19__1.jpg",
+                    "timestamp": 1719209760,
+                    "uri": "/media/demo/10/thumb_5-19__1.jpg",
+                    "url": "http://127.0.0.1/media/demo/10/thumb_5-19__1.jpg",
+                    "used": "y",
+                    "writer": "아무개"
+                }
+			]
+	}
+	"server": {
             "namespace": "ide",
             "remote-addess": "192.168.0.15",
             "runtime": 0,
             "status": "success",
-            "timestamp": 1732531383,
+            "timestamp": 1719209805,
             "version": "2.0"
         }
-    }
+	}
 }
 ```
