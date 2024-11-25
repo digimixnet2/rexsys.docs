@@ -62,7 +62,7 @@ function MultipleUpload(){
 		project : '프로젝트 코드'
 		token : '토큰키',
 		category '미디어 카테고리의 index or id',
-            type : 'board',
+            	type : 'board',
 		writer : '작성자', //선택 사항
 		tag : '가, 나, 다', //선택 사항 콤마단위 or "["가", "나", "다"]
 		name : '미디어 제목',
