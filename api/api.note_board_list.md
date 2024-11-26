@@ -24,7 +24,7 @@ var url = '/api/ide/note/board/item/list';
 var postdata = {
 	project: '프로젝트 코드'
 	token: '토큰키',
-	category: 'media-1' // or database table column tb_idx
+	id : 'board-1'
 	page : 1, // 1페이지 호출
 	per_record_num : 100 // 한페이지에 100개 보여줌.
 };
