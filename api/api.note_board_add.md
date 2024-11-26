@@ -13,7 +13,7 @@
 |------|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |token|토큰(키)|string|${\color{red}필수}$|클라이언트 인증에서 받은 토큰키|
-|category|미디어ID|string|${\color{red}필수}$|관리자 페이지 미디어 메뉴에서 생성한 미디어 카테고리 혹은 미디어 그룹 ID|
+|category|게시판 ID|string|${\color{red}필수}$|관리자 게시판 메뉴에서 생성한 게시판 카테고리 혹은 ID|
 |type|노트 타입|string|${\color{red}필수}$|기본 "board"|
 |name|글 제목|string|${\color{red}필수}$|게시물의 제목|
 |writer|글 작성자|string|${\color{red}필수}$|게시물 계정 혹은 작성자|
