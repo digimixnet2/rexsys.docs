@@ -57,7 +57,7 @@ $('#btn-upload-files').on( 'click', function(e){
 
 function MultipleUpload(){
 
-	var url = '/api/media/item/upload';
+	var url = '/api/ide/note/board/item/add';
 	var postdata = {
 		project : '프로젝트 코드'
 		token : '토큰키',
