@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 |project|프로젝트 코드|string|${\color{red}필수}$|-|
 |token|토큰(키)|string|${\color{red}필수}$|클라이언트 인증에서 받은 토큰키|
-|id|미디어 index 혹은 미디어의 id|string|${\color{red}필수}$|관리자 페이지에서 생성한 미디어의 index 혹은 id 값|
+|id|게시판의 id|string|${\color{red}필수}$|관리자 페이지에서 생성한 미디어의 index 혹은 id 값|
 |page|페이지번호|int|선택|페이지번호 미 입력시 기본값 = 1 |
 |per_record_num|한 페이지에 보여지는 미디어수|int|선택|미 입력시 기본값 = 50|
 
