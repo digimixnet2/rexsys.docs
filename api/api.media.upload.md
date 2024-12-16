@@ -117,11 +117,29 @@ function MultipleUpload(){
     "rexsys": {
         "result": [
             {
-                "filename": "5-21__1.jpg",
+                "category": 62,
+                "datetime": "2024-12-16 10:27:43",
+                "filename": "ljkuzkkd9o_1734312463.png",
+                "filesize": 72780,
                 "group": "image",
-                "mimetype": "image/jpeg",
-                "realname": "5-21_.jpg",
-                "size": 63153
+                "idx": 250,
+                "like": 0,
+                "mimetype": "image/png",
+                "note": {
+                    "content": "",
+                    "custom": null,
+                    "id": "",
+                    "link": "",
+                    "name": "",
+                    "tag": "[]"
+                },
+                "realname": "Image.png",
+                "thumb": "http://192.168.0.15/media/haccp/62/thumb_ljkuzkkd9o_1734312463.png",
+                "timestamp": 1734312463,
+                "uri": "/media/haccp/62/ljkuzkkd9o_1734312463.png",
+                "url": "http://192.168.0.15/media/haccp/62/ljkuzkkd9o_1734312463.png",
+                "used": "n",
+                "writer": ""
             }
         ],
         "server": {
