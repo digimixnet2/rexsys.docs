@@ -25,7 +25,8 @@
 
 ### 3. 미디어
 
-3.1. [미디어 업로드](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.media.upload.md)
+3.1. [미디어 업로드 : 첨부파일](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.media.upload.md)
+3.2. [미디어 업로드 : raw - base64](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.media.upload.raw.md)
 
 3.2. [미디어 목록 조회](https://github.com/digimixnet2/rexsys.docs/blob/main/api/api.media.list.md)
 
