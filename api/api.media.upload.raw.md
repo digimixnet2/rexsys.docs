@@ -43,8 +43,8 @@ var raws = [];
 
 $('#inp-upload-files').on ( 'change', function(e){
 
-	files = Array.prototype.slice.call(e.target.files);
-	for( var i = 0; i < files.lengh; ++i )
+  files = Array.prototype.slice.call(e.target.files);
+  for( var i = 0; i < files.lengh; ++i )
   {
     let reader = new FileReader();
     reader.onloadend = function () { 
