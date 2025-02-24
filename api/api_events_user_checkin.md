@@ -16,6 +16,7 @@
 |user_email|사용자 이메일주소|string|${\color{red}필수}$|없으면 빈공간으로 전송|
 |user_phone|사용자 휴대폰번호|string|${\color{red}필수}$|하이퍼(-) 없이 전송|
 |agree|개인정보 동의여부|string|${\color{red}필수}$|y or n|
+|os_agent|클라이언트 OS AGENT|string|선택|브라우저 정보|
 
 ### 이벤트 사용자 인 예제 (jQuery)
 ```javascript
@@ -26,7 +27,8 @@ var postdata = {
 	user_name : '사용자 이름',
 	user_email : '사용자 이메일 주소',
 	user_phone : '사용자 휴대폰 번호',
-	agree : 'y'
+	agree : 'y',
+	os_agent : '브라우저 agent'
 };
 
 var encodedata =  { EncodeData: window.btoa(encodeURIComponent(JSON.stringify( postdata ))) };
